@@ -52,12 +52,13 @@ public final class ResourcesProto {
       "s.v3.Impression.ImpressionTypeB\003\340A\002\022\030\n\020g" +
       "ame_object_type\030\004 \001(\005\"P\n\016ImpressionType\022" +
       "\037\n\033IMPRESSION_TYPE_UNSPECIFIED\020\000\022\r\n\tPRES" +
-      "ENTED\020\001\022\016\n\nINTERACTED\020\002B\265\001\n$com.google.m" +
+      "ENTED\020\001\022\016\n\nINTERACTED\020\002B\330\001\n$com.google.m" +
       "aps.playablelocations.v3B\016ResourcesProto" +
       "P\001ZQgoogle.golang.org/genproto/googleapi" +
       "s/maps/playablelocations/v3;playableloca" +
       "tions\242\002\004GMPL\252\002 Google.Maps.PlayableLocat" +
-      "ions.V3b\006proto3"
+      "ions.V3\312\002 Google\\Maps\\PlayableLocations\\" +
+      "V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

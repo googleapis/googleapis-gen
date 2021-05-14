@@ -122,8 +122,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.maps.playablelocations.v3.Impression> impressions_;
   /**
    * <pre>
-   * Required. Impression event details. The maximum number of impression reports that you
-   * can log at once is 50.
+   * Required. Impression event details. The maximum number of impression
+   * reports that you can log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Impression event details. The maximum number of impression reports that you
-   * can log at once is 50.
+   * Required. Impression event details. The maximum number of impression
+   * reports that you can log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Impression event details. The maximum number of impression reports that you
-   * can log at once is 50.
+   * Required. Impression event details. The maximum number of impression
+   * reports that you can log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -159,8 +159,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Impression event details. The maximum number of impression reports that you
-   * can log at once is 50.
+   * Required. Impression event details. The maximum number of impression
+   * reports that you can log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -171,8 +171,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Impression event details. The maximum number of impression reports that you
-   * can log at once is 50.
+   * Required. Impression event details. The maximum number of impression
+   * reports that you can log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -187,9 +187,9 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object requestId_;
   /**
    * <pre>
-   * Required. A string that uniquely identifies the log impressions request. This allows
-   * you to detect duplicate requests. We recommend that you use UUIDs for this
-   * value. The value must not exceed 50 characters.
+   * Required. A string that uniquely identifies the log impressions request.
+   * This allows you to detect duplicate requests. We recommend that you use
+   * UUIDs for this value. The value must not exceed 50 characters.
    * You should reuse the `request_id` only when retrying a request in case of
    * failure. In this case, the request must be identical to the one that
    * failed.
@@ -213,9 +213,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A string that uniquely identifies the log impressions request. This allows
-   * you to detect duplicate requests. We recommend that you use UUIDs for this
-   * value. The value must not exceed 50 characters.
+   * Required. A string that uniquely identifies the log impressions request.
+   * This allows you to detect duplicate requests. We recommend that you use
+   * UUIDs for this value. The value must not exceed 50 characters.
    * You should reuse the `request_id` only when retrying a request in case of
    * failure. In this case, the request must be identical to the one that
    * failed.
@@ -243,8 +243,8 @@ private static final long serialVersionUID = 0L;
   private com.google.maps.unity.ClientInfo clientInfo_;
   /**
    * <pre>
-   * Required. Information about the client device. For example, device model and
-   * operating system.
+   * Required. Information about the client device. For example, device model
+   * and operating system.
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -256,8 +256,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Information about the client device. For example, device model and
-   * operating system.
+   * Required. Information about the client device. For example, device model
+   * and operating system.
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -269,8 +269,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Information about the client device. For example, device model and
-   * operating system.
+   * Required. Information about the client device. For example, device model
+   * and operating system.
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -687,8 +687,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -702,8 +702,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -717,8 +717,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -732,8 +732,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -754,8 +754,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -773,8 +773,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -794,8 +794,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -816,8 +816,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -835,8 +835,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -854,8 +854,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -874,8 +874,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -892,8 +892,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -910,8 +910,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -922,8 +922,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -937,8 +937,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -953,8 +953,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -965,8 +965,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -978,8 +978,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Impression event details. The maximum number of impression reports that you
-     * can log at once is 50.
+     * Required. Impression event details. The maximum number of impression
+     * reports that you can log at once is 50.
      * </pre>
      *
      * <code>repeated .google.maps.playablelocations.v3.Impression impressions = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1006,9 +1006,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object requestId_ = "";
     /**
      * <pre>
-     * Required. A string that uniquely identifies the log impressions request. This allows
-     * you to detect duplicate requests. We recommend that you use UUIDs for this
-     * value. The value must not exceed 50 characters.
+     * Required. A string that uniquely identifies the log impressions request.
+     * This allows you to detect duplicate requests. We recommend that you use
+     * UUIDs for this value. The value must not exceed 50 characters.
      * You should reuse the `request_id` only when retrying a request in case of
      * failure. In this case, the request must be identical to the one that
      * failed.
@@ -1031,9 +1031,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies the log impressions request. This allows
-     * you to detect duplicate requests. We recommend that you use UUIDs for this
-     * value. The value must not exceed 50 characters.
+     * Required. A string that uniquely identifies the log impressions request.
+     * This allows you to detect duplicate requests. We recommend that you use
+     * UUIDs for this value. The value must not exceed 50 characters.
      * You should reuse the `request_id` only when retrying a request in case of
      * failure. In this case, the request must be identical to the one that
      * failed.
@@ -1057,9 +1057,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies the log impressions request. This allows
-     * you to detect duplicate requests. We recommend that you use UUIDs for this
-     * value. The value must not exceed 50 characters.
+     * Required. A string that uniquely identifies the log impressions request.
+     * This allows you to detect duplicate requests. We recommend that you use
+     * UUIDs for this value. The value must not exceed 50 characters.
      * You should reuse the `request_id` only when retrying a request in case of
      * failure. In this case, the request must be identical to the one that
      * failed.
@@ -1081,9 +1081,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies the log impressions request. This allows
-     * you to detect duplicate requests. We recommend that you use UUIDs for this
-     * value. The value must not exceed 50 characters.
+     * Required. A string that uniquely identifies the log impressions request.
+     * This allows you to detect duplicate requests. We recommend that you use
+     * UUIDs for this value. The value must not exceed 50 characters.
      * You should reuse the `request_id` only when retrying a request in case of
      * failure. In this case, the request must be identical to the one that
      * failed.
@@ -1100,9 +1100,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies the log impressions request. This allows
-     * you to detect duplicate requests. We recommend that you use UUIDs for this
-     * value. The value must not exceed 50 characters.
+     * Required. A string that uniquely identifies the log impressions request.
+     * This allows you to detect duplicate requests. We recommend that you use
+     * UUIDs for this value. The value must not exceed 50 characters.
      * You should reuse the `request_id` only when retrying a request in case of
      * failure. In this case, the request must be identical to the one that
      * failed.
@@ -1129,8 +1129,8 @@ private static final long serialVersionUID = 0L;
         com.google.maps.unity.ClientInfo, com.google.maps.unity.ClientInfo.Builder, com.google.maps.unity.ClientInfoOrBuilder> clientInfoBuilder_;
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1141,8 +1141,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1157,8 +1157,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1178,8 +1178,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1197,8 +1197,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1220,8 +1220,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1239,8 +1239,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1252,8 +1252,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1268,8 +1268,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Information about the client device. For example, device model and
-     * operating system.
+     * Required. Information about the client device. For example, device model
+     * and operating system.
      * </pre>
      *
      * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>

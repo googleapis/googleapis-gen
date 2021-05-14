@@ -3,24 +3,21 @@
 return [
     'interfaces' => [
         'google.iam.admin.v1.IAM' => [
-            'ListServiceAccounts' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{name=projects/*}/serviceAccounts',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
+            'CreateRole' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/{parent=organizations/*}/roles',
+                'body' => '*',
+                'additionalBindings' => [
+                    [
+                        'method' => 'post',
+                        'uriTemplate' => '/v1/{parent=projects/*}/roles',
+                        'body' => '*',
                     ],
                 ],
-            ],
-            'GetServiceAccount' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}',
                 'placeholders' => [
-                    'name' => [
+                    'parent' => [
                         'getters' => [
-                            'getName',
+                            'getParent',
                         ],
                     ],
                 ],
@@ -37,9 +34,9 @@ return [
                     ],
                 ],
             ],
-            'UpdateServiceAccount' => [
-                'method' => 'put',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}',
+            'CreateServiceAccountKey' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}/keys',
                 'body' => '*',
                 'placeholders' => [
                     'name' => [
@@ -49,14 +46,18 @@ return [
                     ],
                 ],
             ],
-            'PatchServiceAccount' => [
-                'method' => 'patch',
-                'uriTemplate' => '/v1/{service_account.name=projects/*/serviceAccounts/*}',
-                'body' => '*',
+            'DeleteRole' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
+                'additionalBindings' => [
+                    [
+                        'method' => 'delete',
+                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
+                    ],
+                ],
                 'placeholders' => [
-                    'service_account.name' => [
+                    'name' => [
                         'getters' => [
-                            'getServiceAccount',
                             'getName',
                         ],
                     ],
@@ -73,9 +74,20 @@ return [
                     ],
                 ],
             ],
-            'UndeleteServiceAccount' => [
+            'DeleteServiceAccountKey' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*/keys/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'DisableServiceAccount' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}:undelete',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}:disable',
                 'body' => '*',
                 'placeholders' => [
                     'name' => [
@@ -97,10 +109,30 @@ return [
                     ],
                 ],
             ],
-            'DisableServiceAccount' => [
+            'GetIamPolicy' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}:disable',
-                'body' => '*',
+                'uriTemplate' => '/v1/{resource=projects/*/serviceAccounts/*}:getIamPolicy',
+                'placeholders' => [
+                    'resource' => [
+                        'getters' => [
+                            'getResource',
+                        ],
+                    ],
+                ],
+            ],
+            'GetRole' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/{name=roles/*}',
+                'additionalBindings' => [
+                    [
+                        'method' => 'get',
+                        'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
+                    ],
+                    [
+                        'method' => 'get',
+                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
+                    ],
+                ],
                 'placeholders' => [
                     'name' => [
                         'getters' => [
@@ -109,9 +141,9 @@ return [
                     ],
                 ],
             ],
-            'ListServiceAccountKeys' => [
+            'GetServiceAccount' => [
                 'method' => 'get',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}/keys',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}',
                 'placeholders' => [
                     'name' => [
                         'getters' => [
@@ -131,10 +163,35 @@ return [
                     ],
                 ],
             ],
-            'CreateServiceAccountKey' => [
+            'LintPolicy' => [
                 'method' => 'post',
+                'uriTemplate' => '/v1/iamPolicies:lintPolicy',
+                'body' => '*',
+            ],
+            'ListRoles' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/roles',
+                'additionalBindings' => [
+                    [
+                        'method' => 'get',
+                        'uriTemplate' => '/v1/{parent=organizations/*}/roles',
+                    ],
+                    [
+                        'method' => 'get',
+                        'uriTemplate' => '/v1/{parent=projects/*}/roles',
+                    ],
+                ],
+                'placeholders' => [
+                    'parent' => [
+                        'getters' => [
+                            'getParent',
+                        ],
+                    ],
+                ],
+            ],
+            'ListServiceAccountKeys' => [
+                'method' => 'get',
                 'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}/keys',
-                'body' => '*',
                 'placeholders' => [
                     'name' => [
                         'getters' => [
@@ -143,25 +200,53 @@ return [
                     ],
                 ],
             ],
-            'UploadServiceAccountKey' => [
+            'ListServiceAccounts' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/{name=projects/*}/serviceAccounts',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'PatchServiceAccount' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/{service_account.name=projects/*/serviceAccounts/*}',
+                'body' => '*',
+                'placeholders' => [
+                    'service_account.name' => [
+                        'getters' => [
+                            'getServiceAccount',
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'QueryAuditableServices' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}/keys:upload',
+                'uriTemplate' => '/v1/iamPolicies:queryAuditableServices',
+                'body' => '*',
+            ],
+            'QueryGrantableRoles' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/roles:queryGrantableRoles',
+                'body' => '*',
+            ],
+            'QueryTestablePermissions' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/permissions:queryTestablePermissions',
+                'body' => '*',
+            ],
+            'SetIamPolicy' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/{resource=projects/*/serviceAccounts/*}:setIamPolicy',
                 'body' => '*',
                 'placeholders' => [
-                    'name' => [
+                    'resource' => [
                         'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'DeleteServiceAccountKey' => [
-                'method' => 'delete',
-                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*/keys/*}',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
+                            'getResource',
                         ],
                     ],
                 ],
@@ -190,29 +275,6 @@ return [
                     ],
                 ],
             ],
-            'GetIamPolicy' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{resource=projects/*/serviceAccounts/*}:getIamPolicy',
-                'placeholders' => [
-                    'resource' => [
-                        'getters' => [
-                            'getResource',
-                        ],
-                    ],
-                ],
-            ],
-            'SetIamPolicy' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{resource=projects/*/serviceAccounts/*}:setIamPolicy',
-                'body' => '*',
-                'placeholders' => [
-                    'resource' => [
-                        'getters' => [
-                            'getResource',
-                        ],
-                    ],
-                ],
-            ],
             'TestIamPermissions' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/{resource=projects/*/serviceAccounts/*}:testIamPermissions',
@@ -221,108 +283,6 @@ return [
                     'resource' => [
                         'getters' => [
                             'getResource',
-                        ],
-                    ],
-                ],
-            ],
-            'QueryGrantableRoles' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/roles:queryGrantableRoles',
-                'body' => '*',
-            ],
-            'ListRoles' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/roles',
-                'additionalBindings' => [
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{parent=organizations/*}/roles',
-                    ],
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{parent=projects/*}/roles',
-                    ],
-                ],
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'GetRole' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{name=roles/*}',
-                'additionalBindings' => [
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
-                    ],
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
-                    ],
-                ],
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'CreateRole' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{parent=organizations/*}/roles',
-                'body' => '*',
-                'additionalBindings' => [
-                    [
-                        'method' => 'post',
-                        'uriTemplate' => '/v1/{parent=projects/*}/roles',
-                        'body' => '*',
-                    ],
-                ],
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'UpdateRole' => [
-                'method' => 'patch',
-                'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
-                'body' => 'role',
-                'additionalBindings' => [
-                    [
-                        'method' => 'patch',
-                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
-                        'body' => 'role',
-                    ],
-                ],
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'DeleteRole' => [
-                'method' => 'delete',
-                'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
-                'additionalBindings' => [
-                    [
-                        'method' => 'delete',
-                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
-                    ],
-                ],
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
                         ],
                     ],
                 ],
@@ -346,40 +306,53 @@ return [
                     ],
                 ],
             ],
-            'QueryTestablePermissions' => [
+            'UndeleteServiceAccount' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/permissions:queryTestablePermissions',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}:undelete',
                 'body' => '*',
-            ],
-            'QueryAuditableServices' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/iamPolicies:queryAuditableServices',
-                'body' => '*',
-            ],
-            'LintPolicy' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/iamPolicies:lintPolicy',
-                'body' => '*',
-            ],
-        ],
-        'google.longrunning.Operations' => [
-            'GetOperation' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1beta/{name=projects/*/locations/*/workloadIdentityPools/*/operations/*}',
-                'additionalBindings' => [
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1beta/{name=projects/*/locations/*/workloadIdentityPools/*/providers/*/operations/*}',
-                    ],
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{name=projects/*/locations/*/workloadIdentityPools/*/operations/*}',
-                    ],
-                    [
-                        'method' => 'get',
-                        'uriTemplate' => '/v1/{name=projects/*/locations/*/workloadIdentityPools/*/providers/*/operations/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
                     ],
                 ],
+            ],
+            'UpdateRole' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/{name=organizations/*/roles/*}',
+                'body' => 'role',
+                'additionalBindings' => [
+                    [
+                        'method' => 'patch',
+                        'uriTemplate' => '/v1/{name=projects/*/roles/*}',
+                        'body' => 'role',
+                    ],
+                ],
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'UpdateServiceAccount' => [
+                'method' => 'put',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}',
+                'body' => '*',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'UploadServiceAccountKey' => [
+                'method' => 'post',
+                'uriTemplate' => '/v1/{name=projects/*/serviceAccounts/*}/keys:upload',
+                'body' => '*',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

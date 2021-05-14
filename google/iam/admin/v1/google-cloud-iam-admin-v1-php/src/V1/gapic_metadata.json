@@ -1,0 +1,163 @@
+{
+    "schema": "1.0",
+    "comment": "This file maps proto services\/RPCs to the corresponding library clients\/methods",
+    "language": "php",
+    "protoPackage": "google.iam.admin.v1",
+    "libraryPackage": "Google\\Iam\\Admin\\V1",
+    "services": {
+        "IAM": {
+            "clients": {
+                "grpc": {
+                    "libraryClient": "IAMGapicClient",
+                    "rpcs": {
+                        "CreateRole": {
+                            "methods": [
+                                "createRole"
+                            ]
+                        },
+                        "CreateServiceAccount": {
+                            "methods": [
+                                "createServiceAccount"
+                            ]
+                        },
+                        "CreateServiceAccountKey": {
+                            "methods": [
+                                "createServiceAccountKey"
+                            ]
+                        },
+                        "DeleteRole": {
+                            "methods": [
+                                "deleteRole"
+                            ]
+                        },
+                        "DeleteServiceAccount": {
+                            "methods": [
+                                "deleteServiceAccount"
+                            ]
+                        },
+                        "DeleteServiceAccountKey": {
+                            "methods": [
+                                "deleteServiceAccountKey"
+                            ]
+                        },
+                        "DisableServiceAccount": {
+                            "methods": [
+                                "disableServiceAccount"
+                            ]
+                        },
+                        "EnableServiceAccount": {
+                            "methods": [
+                                "enableServiceAccount"
+                            ]
+                        },
+                        "GetIamPolicy": {
+                            "methods": [
+                                "getIamPolicy"
+                            ]
+                        },
+                        "GetRole": {
+                            "methods": [
+                                "getRole"
+                            ]
+                        },
+                        "GetServiceAccount": {
+                            "methods": [
+                                "getServiceAccount"
+                            ]
+                        },
+                        "GetServiceAccountKey": {
+                            "methods": [
+                                "getServiceAccountKey"
+                            ]
+                        },
+                        "LintPolicy": {
+                            "methods": [
+                                "lintPolicy"
+                            ]
+                        },
+                        "ListRoles": {
+                            "methods": [
+                                "listRoles"
+                            ]
+                        },
+                        "ListServiceAccountKeys": {
+                            "methods": [
+                                "listServiceAccountKeys"
+                            ]
+                        },
+                        "ListServiceAccounts": {
+                            "methods": [
+                                "listServiceAccounts"
+                            ]
+                        },
+                        "PatchServiceAccount": {
+                            "methods": [
+                                "patchServiceAccount"
+                            ]
+                        },
+                        "QueryAuditableServices": {
+                            "methods": [
+                                "queryAuditableServices"
+                            ]
+                        },
+                        "QueryGrantableRoles": {
+                            "methods": [
+                                "queryGrantableRoles"
+                            ]
+                        },
+                        "QueryTestablePermissions": {
+                            "methods": [
+                                "queryTestablePermissions"
+                            ]
+                        },
+                        "SetIamPolicy": {
+                            "methods": [
+                                "setIamPolicy"
+                            ]
+                        },
+                        "SignBlob": {
+                            "methods": [
+                                "signBlob"
+                            ]
+                        },
+                        "SignJwt": {
+                            "methods": [
+                                "signJwt"
+                            ]
+                        },
+                        "TestIamPermissions": {
+                            "methods": [
+                                "testIamPermissions"
+                            ]
+                        },
+                        "UndeleteRole": {
+                            "methods": [
+                                "undeleteRole"
+                            ]
+                        },
+                        "UndeleteServiceAccount": {
+                            "methods": [
+                                "undeleteServiceAccount"
+                            ]
+                        },
+                        "UpdateRole": {
+                            "methods": [
+                                "updateRole"
+                            ]
+                        },
+                        "UpdateServiceAccount": {
+                            "methods": [
+                                "updateServiceAccount"
+                            ]
+                        },
+                        "UploadServiceAccountKey": {
+                            "methods": [
+                                "uploadServiceAccountKey"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

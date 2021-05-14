@@ -105,12 +105,13 @@ public final class PlayableLocationsProto {
       "v3.LogImpressionsRequest\0328.google.maps.p" +
       "layablelocations.v3.LogImpressionsRespon" +
       "se\"\035\202\323\344\223\002\027\"\022/v3:logImpressions:\001*\032#\312A pl" +
-      "ayablelocations.googleapis.comB\275\001\n$com.g" +
+      "ayablelocations.googleapis.comB\340\001\n$com.g" +
       "oogle.maps.playablelocations.v3B\026Playabl" +
       "eLocationsProtoP\001ZQgoogle.golang.org/gen" +
       "proto/googleapis/maps/playablelocations/" +
       "v3;playablelocations\242\002\004GMPL\252\002 Google.Map" +
-      "s.PlayableLocations.V3b\006proto3"
+      "s.PlayableLocations.V3\312\002 Google\\Maps\\Pla" +
+      "yableLocations\\V3b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3,9 +3,9 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Services' => [
-            'UpdateService' => [
+            'DeleteService' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Cloud\AppEngine\V1\Service',
+                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',
                     'initialPollDelayMillis' => '500',
                     'pollDelayMultiplier' => '1.5',
@@ -13,9 +13,9 @@ return [
                     'totalPollTimeoutMillis' => '300000',
                 ],
             ],
-            'DeleteService' => [
+            'UpdateService' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
+                    'operationReturnType' => '\Google\Cloud\AppEngine\V1\Service',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',
                     'initialPollDelayMillis' => '500',
                     'pollDelayMultiplier' => '1.5',

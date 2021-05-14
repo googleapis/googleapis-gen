@@ -1,0 +1,51 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "java",
+  "protoPackage": "google.apps.alertcenter.v1beta1",
+  "libraryPackage": "com.google.apps.alertcenter.v1beta1",
+  "services": {
+    "AlertCenterService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AlertCenterServiceClient",
+          "rpcs": {
+            "BatchDeleteAlerts": {
+              "methods": ["batchDeleteAlerts", "batchDeleteAlertsCallable"]
+            },
+            "BatchUndeleteAlerts": {
+              "methods": ["batchUndeleteAlerts", "batchUndeleteAlertsCallable"]
+            },
+            "CreateAlertFeedback": {
+              "methods": ["createAlertFeedback", "createAlertFeedbackCallable"]
+            },
+            "DeleteAlert": {
+              "methods": ["deleteAlert", "deleteAlertCallable"]
+            },
+            "GetAlert": {
+              "methods": ["getAlert", "getAlertCallable"]
+            },
+            "GetAlertMetadata": {
+              "methods": ["getAlertMetadata", "getAlertMetadataCallable"]
+            },
+            "GetSettings": {
+              "methods": ["getSettings", "getSettingsCallable"]
+            },
+            "ListAlertFeedback": {
+              "methods": ["listAlertFeedback", "listAlertFeedbackCallable"]
+            },
+            "ListAlerts": {
+              "methods": ["listAlerts", "listAlertsPagedCallable", "listAlertsCallable"]
+            },
+            "UndeleteAlert": {
+              "methods": ["undeleteAlert", "undeleteAlertCallable"]
+            },
+            "UpdateSettings": {
+              "methods": ["updateSettings", "updateSettingsCallable"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

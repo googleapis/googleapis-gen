@@ -1,0 +1,73 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods.",
+  "language": "go",
+  "protoPackage": "google.apps.alertcenter.v1beta1",
+  "libraryPackage": "google.golang.org/google/apps/alertcenter/v1beta1",
+  "services": {
+    "AlertCenterService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "Client",
+          "rpcs": {
+            "BatchDeleteAlerts": {
+              "methods": [
+                "BatchDeleteAlerts"
+              ]
+            },
+            "BatchUndeleteAlerts": {
+              "methods": [
+                "BatchUndeleteAlerts"
+              ]
+            },
+            "CreateAlertFeedback": {
+              "methods": [
+                "CreateAlertFeedback"
+              ]
+            },
+            "DeleteAlert": {
+              "methods": [
+                "DeleteAlert"
+              ]
+            },
+            "GetAlert": {
+              "methods": [
+                "GetAlert"
+              ]
+            },
+            "GetAlertMetadata": {
+              "methods": [
+                "GetAlertMetadata"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings"
+              ]
+            },
+            "ListAlertFeedback": {
+              "methods": [
+                "ListAlertFeedback"
+              ]
+            },
+            "ListAlerts": {
+              "methods": [
+                "ListAlerts"
+              ]
+            },
+            "UndeleteAlert": {
+              "methods": [
+                "UndeleteAlert"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

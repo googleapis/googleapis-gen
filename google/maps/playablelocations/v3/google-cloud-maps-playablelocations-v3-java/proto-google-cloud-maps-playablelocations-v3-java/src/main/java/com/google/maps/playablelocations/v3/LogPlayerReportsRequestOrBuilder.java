@@ -9,8 +9,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. Player reports. The maximum number of player reports that you can log at
-   * once is 50.
+   * Required. Player reports. The maximum number of player reports that you can
+   * log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.PlayerReport player_reports = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
       getPlayerReportsList();
   /**
    * <pre>
-   * Required. Player reports. The maximum number of player reports that you can log at
-   * once is 50.
+   * Required. Player reports. The maximum number of player reports that you can
+   * log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.PlayerReport player_reports = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -28,8 +28,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
   com.google.maps.playablelocations.v3.PlayerReport getPlayerReports(int index);
   /**
    * <pre>
-   * Required. Player reports. The maximum number of player reports that you can log at
-   * once is 50.
+   * Required. Player reports. The maximum number of player reports that you can
+   * log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.PlayerReport player_reports = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -37,8 +37,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
   int getPlayerReportsCount();
   /**
    * <pre>
-   * Required. Player reports. The maximum number of player reports that you can log at
-   * once is 50.
+   * Required. Player reports. The maximum number of player reports that you can
+   * log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.PlayerReport player_reports = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -47,8 +47,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
       getPlayerReportsOrBuilderList();
   /**
    * <pre>
-   * Required. Player reports. The maximum number of player reports that you can log at
-   * once is 50.
+   * Required. Player reports. The maximum number of player reports that you can
+   * log at once is 50.
    * </pre>
    *
    * <code>repeated .google.maps.playablelocations.v3.PlayerReport player_reports = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -58,9 +58,9 @@ public interface LogPlayerReportsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. A string that uniquely identifies the log player reports request. This
-   * allows you to detect duplicate requests. We recommend that you use UUIDs
-   * for this value. The value must not exceed 50 characters.
+   * Required. A string that uniquely identifies the log player reports request.
+   * This allows you to detect duplicate requests. We recommend that you use
+   * UUIDs for this value. The value must not exceed 50 characters.
    * You should reuse the `request_id` only when retrying a request in the case
    * of a failure. In that case, the request must be identical to the one that
    * failed.
@@ -72,9 +72,9 @@ public interface LogPlayerReportsRequestOrBuilder extends
   java.lang.String getRequestId();
   /**
    * <pre>
-   * Required. A string that uniquely identifies the log player reports request. This
-   * allows you to detect duplicate requests. We recommend that you use UUIDs
-   * for this value. The value must not exceed 50 characters.
+   * Required. A string that uniquely identifies the log player reports request.
+   * This allows you to detect duplicate requests. We recommend that you use
+   * UUIDs for this value. The value must not exceed 50 characters.
    * You should reuse the `request_id` only when retrying a request in the case
    * of a failure. In that case, the request must be identical to the one that
    * failed.
@@ -88,8 +88,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. Information about the client device (for example, device model and
-   * operating system).
+   * Required. Information about the client device (for example, device model
+   * and operating system).
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -98,8 +98,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
   boolean hasClientInfo();
   /**
    * <pre>
-   * Required. Information about the client device (for example, device model and
-   * operating system).
+   * Required. Information about the client device (for example, device model
+   * and operating system).
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -108,8 +108,8 @@ public interface LogPlayerReportsRequestOrBuilder extends
   com.google.maps.unity.ClientInfo getClientInfo();
   /**
    * <pre>
-   * Required. Information about the client device (for example, device model and
-   * operating system).
+   * Required. Information about the client device (for example, device model
+   * and operating system).
    * </pre>
    *
    * <code>.google.maps.unity.ClientInfo client_info = 3 [(.google.api.field_behavior) = REQUIRED];</code>

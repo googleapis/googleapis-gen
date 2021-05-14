@@ -1,0 +1,33 @@
+{
+    "schema": "1.0",
+    "comment": "This file maps proto services\/RPCs to the corresponding library clients\/methods",
+    "language": "php",
+    "protoPackage": "google.maps.playablelocations.v3",
+    "libraryPackage": "Google\\Maps\\PlayableLocations\\V3",
+    "services": {
+        "PlayableLocations": {
+            "clients": {
+                "grpc": {
+                    "libraryClient": "PlayableLocationsGapicClient",
+                    "rpcs": {
+                        "LogImpressions": {
+                            "methods": [
+                                "logImpressions"
+                            ]
+                        },
+                        "LogPlayerReports": {
+                            "methods": [
+                                "logPlayerReports"
+                            ]
+                        },
+                        "SamplePlayableLocations": {
+                            "methods": [
+                                "samplePlayableLocations"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,8 +5,9 @@ package com.google.maps.playablelocations.v3;
 
 /**
  * <pre>
- * A response for the [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions] method.
- * This method returns no data upon success.
+ * A response for the
+ * [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions]
+ * method. This method returns no data upon success.
  * </pre>
  *
  * Protobuf type {@code google.maps.playablelocations.v3.LogImpressionsResponse}
@@ -231,8 +232,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A response for the [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions] method.
-   * This method returns no data upon success.
+   * A response for the
+   * [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions]
+   * method. This method returns no data upon success.
    * </pre>
    *
    * Protobuf type {@code google.maps.playablelocations.v3.LogImpressionsResponse}

@@ -3,9 +3,9 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Instances' => [
-            'DeleteInstance' => [
+            'DebugInstance' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
+                    'operationReturnType' => '\Google\Cloud\AppEngine\V1\Instance',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',
                     'initialPollDelayMillis' => '500',
                     'pollDelayMultiplier' => '1.5',
@@ -13,9 +13,9 @@ return [
                     'totalPollTimeoutMillis' => '300000',
                 ],
             ],
-            'DebugInstance' => [
+            'DeleteInstance' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Cloud\AppEngine\V1\Instance',
+                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',
                     'initialPollDelayMillis' => '500',
                     'pollDelayMultiplier' => '1.5',

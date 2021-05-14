@@ -3,13 +3,25 @@
 return [
     'interfaces' => [
         'google.appengine.v1.AuthorizedCertificates' => [
-            'ListAuthorizedCertificates' => [
-                'method' => 'get',
+            'CreateAuthorizedCertificate' => [
+                'method' => 'post',
                 'uriTemplate' => '/v1/{parent=apps/*}/authorizedCertificates',
+                'body' => 'certificate',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
                             'getParent',
+                        ],
+                    ],
+                ],
+            ],
+            'DeleteAuthorizedCertificate' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=apps/*/authorizedCertificates/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
                         ],
                     ],
                 ],
@@ -25,10 +37,9 @@ return [
                     ],
                 ],
             ],
-            'CreateAuthorizedCertificate' => [
-                'method' => 'post',
+            'ListAuthorizedCertificates' => [
+                'method' => 'get',
                 'uriTemplate' => '/v1/{parent=apps/*}/authorizedCertificates',
-                'body' => 'certificate',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
@@ -41,17 +52,6 @@ return [
                 'method' => 'patch',
                 'uriTemplate' => '/v1/{name=apps/*/authorizedCertificates/*}',
                 'body' => 'certificate',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'DeleteAuthorizedCertificate' => [
-                'method' => 'delete',
-                'uriTemplate' => '/v1/{name=apps/*/authorizedCertificates/*}',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

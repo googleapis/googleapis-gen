@@ -3,26 +3,14 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Applications' => [
-            'GetApplication' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{name=apps/*}',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
             'CreateApplication' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/apps',
                 'body' => 'application',
             ],
-            'UpdateApplication' => [
-                'method' => 'patch',
+            'GetApplication' => [
+                'method' => 'get',
                 'uriTemplate' => '/v1/{name=apps/*}',
-                'body' => 'application',
                 'placeholders' => [
                     'name' => [
                         'getters' => [
@@ -35,6 +23,18 @@ return [
                 'method' => 'post',
                 'uriTemplate' => '/v1/{name=apps/*}:repair',
                 'body' => '*',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
+            'UpdateApplication' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/{name=apps/*}',
+                'body' => 'application',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

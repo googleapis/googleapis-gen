@@ -3,13 +3,13 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Services' => [
-            'ListServices' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{parent=apps/*}/services',
+            'DeleteService' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=apps/*/services/*}',
                 'placeholders' => [
-                    'parent' => [
+                    'name' => [
                         'getters' => [
-                            'getParent',
+                            'getName',
                         ],
                     ],
                 ],
@@ -25,21 +25,21 @@ return [
                     ],
                 ],
             ],
-            'UpdateService' => [
-                'method' => 'patch',
-                'uriTemplate' => '/v1/{name=apps/*/services/*}',
-                'body' => 'service',
+            'ListServices' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/{parent=apps/*}/services',
                 'placeholders' => [
-                    'name' => [
+                    'parent' => [
                         'getters' => [
-                            'getName',
+                            'getParent',
                         ],
                     ],
                 ],
             ],
-            'DeleteService' => [
-                'method' => 'delete',
+            'UpdateService' => [
+                'method' => 'patch',
                 'uriTemplate' => '/v1/{name=apps/*/services/*}',
+                'body' => 'service',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

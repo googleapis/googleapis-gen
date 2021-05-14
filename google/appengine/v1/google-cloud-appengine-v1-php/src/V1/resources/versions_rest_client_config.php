@@ -3,13 +3,25 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Versions' => [
-            'ListVersions' => [
-                'method' => 'get',
+            'CreateVersion' => [
+                'method' => 'post',
                 'uriTemplate' => '/v1/{parent=apps/*/services/*}/versions',
+                'body' => 'version',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
                             'getParent',
+                        ],
+                    ],
+                ],
+            ],
+            'DeleteVersion' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=apps/*/services/*/versions/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
                         ],
                     ],
                 ],
@@ -25,10 +37,9 @@ return [
                     ],
                 ],
             ],
-            'CreateVersion' => [
-                'method' => 'post',
+            'ListVersions' => [
+                'method' => 'get',
                 'uriTemplate' => '/v1/{parent=apps/*/services/*}/versions',
-                'body' => 'version',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
@@ -41,17 +52,6 @@ return [
                 'method' => 'patch',
                 'uriTemplate' => '/v1/{name=apps/*/services/*/versions/*}',
                 'body' => 'version',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'DeleteVersion' => [
-                'method' => 'delete',
-                'uriTemplate' => '/v1/{name=apps/*/services/*/versions/*}',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

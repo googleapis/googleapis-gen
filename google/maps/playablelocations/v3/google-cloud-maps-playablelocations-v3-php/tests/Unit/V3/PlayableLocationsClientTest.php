@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,22 +22,23 @@
 
 namespace Google\Maps\PlayableLocations\Tests\Unit\V3;
 
-use Google\Maps\PlayableLocations\V3\PlayableLocationsClient;
 use Google\ApiCore\ApiException;
 use Google\ApiCore\CredentialsWrapper;
 use Google\ApiCore\Testing\GeneratedTest;
+
 use Google\ApiCore\Testing\MockTransport;
-use Google\Maps\Playablelocations\V3\LogImpressionsResponse;
-use Google\Maps\Playablelocations\V3\LogPlayerReportsResponse;
-use Google\Maps\Playablelocations\V3\SamplePlayableLocationsResponse;
+use Google\Maps\PlayableLocations\V3\LogImpressionsResponse;
+use Google\Maps\PlayableLocations\V3\LogPlayerReportsResponse;
+use Google\Maps\PlayableLocations\V3\PlayableLocationsClient;
 use Google\Maps\Playablelocations\V3\Sample\AreaFilter;
+use Google\Maps\PlayableLocations\V3\SamplePlayableLocationsResponse;
 use Google\Maps\Unity\ClientInfo;
-use Google\Protobuf\Any;
 use Google\Rpc\Code;
 use stdClass;
 
 /**
  * @group playablelocations
+ *
  * @group gapic
  */
 class PlayableLocationsClientTest extends GeneratedTest
@@ -55,9 +56,7 @@ class PlayableLocationsClientTest extends GeneratedTest
      */
     private function createCredentials()
     {
-        return $this->getMockBuilder(CredentialsWrapper::class)
-            ->disableOriginalConstructor()
-            ->getMock();
+        return $this->getMockBuilder(CredentialsWrapper::class)->disableOriginalConstructor()->getMock();
     }
 
     /**
@@ -68,81 +67,74 @@ class PlayableLocationsClientTest extends GeneratedTest
         $options += [
             'credentials' => $this->createCredentials(),
         ];
-
         return new PlayableLocationsClient($options);
     }
 
     /**
      * @test
      */
-    public function samplePlayableLocationsTest()
+    public function logImpressionsTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         // Mock response
-        $expectedResponse = new SamplePlayableLocationsResponse();
+        $expectedResponse = new LogImpressionsResponse();
         $transport->addResponse($expectedResponse);
-
         // Mock request
-        $areaFilter = new AreaFilter();
-        $criteria = [];
-
-        $response = $client->samplePlayableLocations($areaFilter, $criteria);
+        $impressions = [];
+        $requestId = 'requestId37109963';
+        $clientInfo = new ClientInfo();
+        $response = $client->logImpressions($impressions, $requestId, $clientInfo);
         $this->assertEquals($expectedResponse, $response);
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
         $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.maps.playablelocations.v3.PlayableLocations/SamplePlayableLocations', $actualFuncCall);
-
-        $actualValue = $actualRequestObject->getAreaFilter();
-
-        $this->assertProtobufEquals($areaFilter, $actualValue);
-        $actualValue = $actualRequestObject->getCriteria();
-
-        $this->assertProtobufEquals($criteria, $actualValue);
-
+        $this->assertSame('/google.maps.playablelocations.v3.PlayableLocations/LogImpressions', $actualFuncCall);
+        $actualValue = $actualRequestObject->getImpressions();
+        $this->assertProtobufEquals($impressions, $actualValue);
+        $actualValue = $actualRequestObject->getRequestId();
+        $this->assertProtobufEquals($requestId, $actualValue);
+        $actualValue = $actualRequestObject->getClientInfo();
+        $this->assertProtobufEquals($clientInfo, $actualValue);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
      * @test
      */
-    public function samplePlayableLocationsExceptionTest()
+    public function logImpressionsExceptionTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         $status = new stdClass();
         $status->code = Code::DATA_LOSS;
         $status->details = 'internal error';
-
-        $expectedExceptionMessage = json_encode([
-           'message' => 'internal error',
-           'code' => Code::DATA_LOSS,
-           'status' => 'DATA_LOSS',
-           'details' => [],
+        $expectedExceptionMessage  = json_encode([
+            'message' => 'internal error',
+            'code' => Code::DATA_LOSS,
+            'status' => 'DATA_LOSS',
+            'details' => [],
         ], JSON_PRETTY_PRINT);
         $transport->addResponse(null, $status);
-
         // Mock request
-        $areaFilter = new AreaFilter();
-        $criteria = [];
-
+        $impressions = [];
+        $requestId = 'requestId37109963';
+        $clientInfo = new ClientInfo();
         try {
-            $client->samplePlayableLocations($areaFilter, $criteria);
+            $client->logImpressions($impressions, $requestId, $clientInfo);
             // If the $client method call did not throw, fail the test
             $this->fail('Expected an ApiException, but no exception was thrown.');
         } catch (ApiException $ex) {
             $this->assertEquals($status->code, $ex->getCode());
             $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
         }
-
         // Call popReceivedCalls to ensure the stub is exhausted
         $transport->popReceivedCalls();
         $this->assertTrue($transport->isExhausted());
@@ -154,19 +146,17 @@ class PlayableLocationsClientTest extends GeneratedTest
     public function logPlayerReportsTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         // Mock response
         $expectedResponse = new LogPlayerReportsResponse();
         $transport->addResponse($expectedResponse);
-
         // Mock request
         $playerReports = [];
         $requestId = 'requestId37109963';
         $clientInfo = new ClientInfo();
-
         $response = $client->logPlayerReports($playerReports, $requestId, $clientInfo);
         $this->assertEquals($expectedResponse, $response);
         $actualRequests = $transport->popReceivedCalls();
@@ -174,17 +164,12 @@ class PlayableLocationsClientTest extends GeneratedTest
         $actualFuncCall = $actualRequests[0]->getFuncCall();
         $actualRequestObject = $actualRequests[0]->getRequestObject();
         $this->assertSame('/google.maps.playablelocations.v3.PlayableLocations/LogPlayerReports', $actualFuncCall);
-
         $actualValue = $actualRequestObject->getPlayerReports();
-
         $this->assertProtobufEquals($playerReports, $actualValue);
         $actualValue = $actualRequestObject->getRequestId();
-
         $this->assertProtobufEquals($requestId, $actualValue);
         $actualValue = $actualRequestObject->getClientInfo();
-
         $this->assertProtobufEquals($clientInfo, $actualValue);
-
         $this->assertTrue($transport->isExhausted());
     }
 
@@ -194,27 +179,24 @@ class PlayableLocationsClientTest extends GeneratedTest
     public function logPlayerReportsExceptionTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         $status = new stdClass();
         $status->code = Code::DATA_LOSS;
         $status->details = 'internal error';
-
-        $expectedExceptionMessage = json_encode([
-           'message' => 'internal error',
-           'code' => Code::DATA_LOSS,
-           'status' => 'DATA_LOSS',
-           'details' => [],
+        $expectedExceptionMessage  = json_encode([
+            'message' => 'internal error',
+            'code' => Code::DATA_LOSS,
+            'status' => 'DATA_LOSS',
+            'details' => [],
         ], JSON_PRETTY_PRINT);
         $transport->addResponse(null, $status);
-
         // Mock request
         $playerReports = [];
         $requestId = 'requestId37109963';
         $clientInfo = new ClientInfo();
-
         try {
             $client->logPlayerReports($playerReports, $requestId, $clientInfo);
             // If the $client method call did not throw, fail the test
@@ -223,7 +205,6 @@ class PlayableLocationsClientTest extends GeneratedTest
             $this->assertEquals($status->code, $ex->getCode());
             $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
         }
-
         // Call popReceivedCalls to ensure the stub is exhausted
         $transport->popReceivedCalls();
         $this->assertTrue($transport->isExhausted());
@@ -232,79 +213,68 @@ class PlayableLocationsClientTest extends GeneratedTest
     /**
      * @test
      */
-    public function logImpressionsTest()
+    public function samplePlayableLocationsTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         // Mock response
-        $expectedResponse = new LogImpressionsResponse();
+        $expectedResponse = new SamplePlayableLocationsResponse();
         $transport->addResponse($expectedResponse);
-
         // Mock request
-        $impressions = [];
-        $requestId = 'requestId37109963';
-        $clientInfo = new ClientInfo();
-
-        $response = $client->logImpressions($impressions, $requestId, $clientInfo);
+        $areaFilter = new AreaFilter();
+        $areaFilterS2CellId = 1592540511;
+        $areaFilter->setS2CellId($areaFilterS2CellId);
+        $criteria = [];
+        $response = $client->samplePlayableLocations($areaFilter, $criteria);
         $this->assertEquals($expectedResponse, $response);
         $actualRequests = $transport->popReceivedCalls();
         $this->assertSame(1, count($actualRequests));
         $actualFuncCall = $actualRequests[0]->getFuncCall();
         $actualRequestObject = $actualRequests[0]->getRequestObject();
-        $this->assertSame('/google.maps.playablelocations.v3.PlayableLocations/LogImpressions', $actualFuncCall);
-
-        $actualValue = $actualRequestObject->getImpressions();
-
-        $this->assertProtobufEquals($impressions, $actualValue);
-        $actualValue = $actualRequestObject->getRequestId();
-
-        $this->assertProtobufEquals($requestId, $actualValue);
-        $actualValue = $actualRequestObject->getClientInfo();
-
-        $this->assertProtobufEquals($clientInfo, $actualValue);
-
+        $this->assertSame('/google.maps.playablelocations.v3.PlayableLocations/SamplePlayableLocations', $actualFuncCall);
+        $actualValue = $actualRequestObject->getAreaFilter();
+        $this->assertProtobufEquals($areaFilter, $actualValue);
+        $actualValue = $actualRequestObject->getCriteria();
+        $this->assertProtobufEquals($criteria, $actualValue);
         $this->assertTrue($transport->isExhausted());
     }
 
     /**
      * @test
      */
-    public function logImpressionsExceptionTest()
+    public function samplePlayableLocationsExceptionTest()
     {
         $transport = $this->createTransport();
-        $client = $this->createClient(['transport' => $transport]);
-
+        $client = $this->createClient([
+            'transport' => $transport,
+        ]);
         $this->assertTrue($transport->isExhausted());
-
         $status = new stdClass();
         $status->code = Code::DATA_LOSS;
         $status->details = 'internal error';
-
-        $expectedExceptionMessage = json_encode([
-           'message' => 'internal error',
-           'code' => Code::DATA_LOSS,
-           'status' => 'DATA_LOSS',
-           'details' => [],
+        $expectedExceptionMessage  = json_encode([
+            'message' => 'internal error',
+            'code' => Code::DATA_LOSS,
+            'status' => 'DATA_LOSS',
+            'details' => [],
         ], JSON_PRETTY_PRINT);
         $transport->addResponse(null, $status);
-
         // Mock request
-        $impressions = [];
-        $requestId = 'requestId37109963';
-        $clientInfo = new ClientInfo();
-
+        $areaFilter = new AreaFilter();
+        $areaFilterS2CellId = 1592540511;
+        $areaFilter->setS2CellId($areaFilterS2CellId);
+        $criteria = [];
         try {
-            $client->logImpressions($impressions, $requestId, $clientInfo);
+            $client->samplePlayableLocations($areaFilter, $criteria);
             // If the $client method call did not throw, fail the test
             $this->fail('Expected an ApiException, but no exception was thrown.');
         } catch (ApiException $ex) {
             $this->assertEquals($status->code, $ex->getCode());
             $this->assertEquals($expectedExceptionMessage, $ex->getMessage());
         }
-
         // Call popReceivedCalls to ensure the stub is exhausted
         $transport->popReceivedCalls();
         $this->assertTrue($transport->isExhausted());

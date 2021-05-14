@@ -3,9 +3,9 @@
 return [
     'interfaces' => [
         'google.maps.playablelocations.v3.PlayableLocations' => [
-            'SamplePlayableLocations' => [
+            'LogImpressions' => [
                 'method' => 'post',
-                'uriTemplate' => '/v3:samplePlayableLocations',
+                'uriTemplate' => '/v3:logImpressions',
                 'body' => '*',
             ],
             'LogPlayerReports' => [
@@ -13,9 +13,9 @@ return [
                 'uriTemplate' => '/v3:logPlayerReports',
                 'body' => '*',
             ],
-            'LogImpressions' => [
+            'SamplePlayableLocations' => [
                 'method' => 'post',
-                'uriTemplate' => '/v3:logImpressions',
+                'uriTemplate' => '/v3:samplePlayableLocations',
                 'body' => '*',
             ],
         ],

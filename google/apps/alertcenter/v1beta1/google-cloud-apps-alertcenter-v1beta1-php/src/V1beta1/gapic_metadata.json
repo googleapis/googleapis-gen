@@ -1,0 +1,73 @@
+{
+    "schema": "1.0",
+    "comment": "This file maps proto services\/RPCs to the corresponding library clients\/methods",
+    "language": "php",
+    "protoPackage": "google.apps.alertcenter.v1beta1",
+    "libraryPackage": "Google\\Apps\\AlertCenter\\V1beta1",
+    "services": {
+        "AlertCenterService": {
+            "clients": {
+                "grpc": {
+                    "libraryClient": "AlertCenterServiceGapicClient",
+                    "rpcs": {
+                        "BatchDeleteAlerts": {
+                            "methods": [
+                                "batchDeleteAlerts"
+                            ]
+                        },
+                        "BatchUndeleteAlerts": {
+                            "methods": [
+                                "batchUndeleteAlerts"
+                            ]
+                        },
+                        "CreateAlertFeedback": {
+                            "methods": [
+                                "createAlertFeedback"
+                            ]
+                        },
+                        "DeleteAlert": {
+                            "methods": [
+                                "deleteAlert"
+                            ]
+                        },
+                        "GetAlert": {
+                            "methods": [
+                                "getAlert"
+                            ]
+                        },
+                        "GetAlertMetadata": {
+                            "methods": [
+                                "getAlertMetadata"
+                            ]
+                        },
+                        "GetSettings": {
+                            "methods": [
+                                "getSettings"
+                            ]
+                        },
+                        "ListAlertFeedback": {
+                            "methods": [
+                                "listAlertFeedback"
+                            ]
+                        },
+                        "ListAlerts": {
+                            "methods": [
+                                "listAlerts"
+                            ]
+                        },
+                        "UndeleteAlert": {
+                            "methods": [
+                                "undeleteAlert"
+                            ]
+                        },
+                        "UpdateSettings": {
+                            "methods": [
+                                "updateSettings"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

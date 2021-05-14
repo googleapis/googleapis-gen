@@ -3,13 +3,25 @@
 return [
     'interfaces' => [
         'google.appengine.v1.DomainMappings' => [
-            'ListDomainMappings' => [
-                'method' => 'get',
+            'CreateDomainMapping' => [
+                'method' => 'post',
                 'uriTemplate' => '/v1/{parent=apps/*}/domainMappings',
+                'body' => 'domain_mapping',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
                             'getParent',
+                        ],
+                    ],
+                ],
+            ],
+            'DeleteDomainMapping' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=apps/*/domainMappings/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
                         ],
                     ],
                 ],
@@ -25,10 +37,9 @@ return [
                     ],
                 ],
             ],
-            'CreateDomainMapping' => [
-                'method' => 'post',
+            'ListDomainMappings' => [
+                'method' => 'get',
                 'uriTemplate' => '/v1/{parent=apps/*}/domainMappings',
-                'body' => 'domain_mapping',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
@@ -41,17 +52,6 @@ return [
                 'method' => 'patch',
                 'uriTemplate' => '/v1/{name=apps/*/domainMappings/*}',
                 'body' => 'domain_mapping',
-                'placeholders' => [
-                    'name' => [
-                        'getters' => [
-                            'getName',
-                        ],
-                    ],
-                ],
-            ],
-            'DeleteDomainMapping' => [
-                'method' => 'delete',
-                'uriTemplate' => '/v1/{name=apps/*/domainMappings/*}',
                 'placeholders' => [
                     'name' => [
                         'getters' => [

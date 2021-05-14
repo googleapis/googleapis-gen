@@ -2,7 +2,6 @@
 
 return [
     'interfaces' => [
-        'google.iam.credentials.v1.IAMCredentials' => [
-        ],
+        'google.iam.credentials.v1.IAMCredentials' => [],
     ],
 ];

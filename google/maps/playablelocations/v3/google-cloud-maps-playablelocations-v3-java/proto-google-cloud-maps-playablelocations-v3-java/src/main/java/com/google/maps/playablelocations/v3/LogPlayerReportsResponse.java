@@ -5,7 +5,8 @@ package com.google.maps.playablelocations.v3;
 
 /**
  * <pre>
- * A response for the [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
+ * A response for the
+ * [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
  * method.
  * This method returns no data upon success.
  * </pre>
@@ -232,7 +233,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A response for the [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
+   * A response for the
+   * [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
    * method.
    * This method returns no data upon success.
    * </pre>

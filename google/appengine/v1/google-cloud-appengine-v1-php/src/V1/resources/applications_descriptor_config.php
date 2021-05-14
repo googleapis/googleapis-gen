@@ -13,7 +13,7 @@ return [
                     'totalPollTimeoutMillis' => '300000',
                 ],
             ],
-            'UpdateApplication' => [
+            'RepairApplication' => [
                 'longRunning' => [
                     'operationReturnType' => '\Google\Cloud\AppEngine\V1\Application',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',
@@ -23,7 +23,7 @@ return [
                     'totalPollTimeoutMillis' => '300000',
                 ],
             ],
-            'RepairApplication' => [
+            'UpdateApplication' => [
                 'longRunning' => [
                     'operationReturnType' => '\Google\Cloud\AppEngine\V1\Application',
                     'metadataReturnType' => '\Google\Cloud\AppEngine\V1\OperationMetadataV1',

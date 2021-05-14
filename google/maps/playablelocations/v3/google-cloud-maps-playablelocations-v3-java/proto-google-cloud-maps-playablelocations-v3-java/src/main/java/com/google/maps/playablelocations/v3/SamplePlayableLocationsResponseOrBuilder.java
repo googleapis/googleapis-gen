@@ -68,9 +68,10 @@ public interface SamplePlayableLocationsResponseOrBuilder extends
 
   /**
    * <pre>
-   * Required. Specifies the "time-to-live" for the set of playable locations. You can use
-   * this value to determine how long to cache the set of playable locations.
-   * After this length of time, your back-end game server should issue a new
+   * Required. Specifies the "time-to-live" for the set of playable locations.
+   * You can use this value to determine how long to cache the set of playable
+   * locations. After this length of time, your back-end game server should
+   * issue a new
    * [SamplePlayableLocations][google.maps.playablelocations.v3.PlayableLocations.SamplePlayableLocations]
    * request to get a fresh set of playable locations (because for example, they
    * might have been removed, a park might have closed for the day, a
@@ -83,9 +84,10 @@ public interface SamplePlayableLocationsResponseOrBuilder extends
   boolean hasTtl();
   /**
    * <pre>
-   * Required. Specifies the "time-to-live" for the set of playable locations. You can use
-   * this value to determine how long to cache the set of playable locations.
-   * After this length of time, your back-end game server should issue a new
+   * Required. Specifies the "time-to-live" for the set of playable locations.
+   * You can use this value to determine how long to cache the set of playable
+   * locations. After this length of time, your back-end game server should
+   * issue a new
    * [SamplePlayableLocations][google.maps.playablelocations.v3.PlayableLocations.SamplePlayableLocations]
    * request to get a fresh set of playable locations (because for example, they
    * might have been removed, a park might have closed for the day, a
@@ -98,9 +100,10 @@ public interface SamplePlayableLocationsResponseOrBuilder extends
   com.google.protobuf.Duration getTtl();
   /**
    * <pre>
-   * Required. Specifies the "time-to-live" for the set of playable locations. You can use
-   * this value to determine how long to cache the set of playable locations.
-   * After this length of time, your back-end game server should issue a new
+   * Required. Specifies the "time-to-live" for the set of playable locations.
+   * You can use this value to determine how long to cache the set of playable
+   * locations. After this length of time, your back-end game server should
+   * issue a new
    * [SamplePlayableLocations][google.maps.playablelocations.v3.PlayableLocations.SamplePlayableLocations]
    * request to get a fresh set of playable locations (because for example, they
    * might have been removed, a park might have closed for the day, a

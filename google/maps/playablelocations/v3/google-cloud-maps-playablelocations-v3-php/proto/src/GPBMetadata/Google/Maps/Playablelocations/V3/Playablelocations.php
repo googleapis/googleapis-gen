@@ -23,7 +23,7 @@ class Playablelocations
         \GPBMetadata\Google\Api\Client::initOnce();
         $pool->internalAddGeneratedFile(
             '
- 
+Ã
 8google/maps/playablelocations/v3/playablelocations.proto google.maps.playablelocations.v3google/api/field_behavior.proto0google/maps/playablelocations/v3/resources.proto7google/maps/playablelocations/v3/sample/resources.proto"google/maps/unity/clientinfo.protogoogle/protobuf/duration.protogoogle/api/client.proto"º
 SamplePlayableLocationsRequestM
 area_filter (23.google.maps.playablelocations.v3.sample.AreaFilterBàAI
@@ -49,8 +49,8 @@ request_id (	BàA7
 PlayableLocationsÆ
 SamplePlayableLocations@.google.maps.playablelocations.v3.SamplePlayableLocationsRequestA.google.maps.playablelocations.v3.SamplePlayableLocationsResponse"&‚Óä“ "/v3:samplePlayableLocations:*ª
 LogPlayerReports9.google.maps.playablelocations.v3.LogPlayerReportsRequest:.google.maps.playablelocations.v3.LogPlayerReportsResponse"‚Óä“"/v3:logPlayerReports:*¢
-LogImpressions7.google.maps.playablelocations.v3.LogImpressionsRequest8.google.maps.playablelocations.v3.LogImpressionsResponse"‚Óä“"/v3:logImpressions:*#ÊA playablelocations.googleapis.comB½
-$com.google.maps.playablelocations.v3BPlayableLocationsProtoPZQgoogle.golang.org/genproto/googleapis/maps/playablelocations/v3;playablelocations¢GMPLª Google.Maps.PlayableLocations.V3bproto3'
+LogImpressions7.google.maps.playablelocations.v3.LogImpressionsRequest8.google.maps.playablelocations.v3.LogImpressionsResponse"‚Óä“"/v3:logImpressions:*#ÊA playablelocations.googleapis.comBà
+$com.google.maps.playablelocations.v3BPlayableLocationsProtoPZQgoogle.golang.org/genproto/googleapis/maps/playablelocations/v3;playablelocations¢GMPLª Google.Maps.PlayableLocations.V3Ê Google\\Maps\\PlayableLocations\\V3bproto3'
         , true);
 
         static::$is_initialized = true;

@@ -41,11 +41,12 @@ namespace Google.Maps.PlayableLocations.V3 {
             "bGVsb2NhdGlvbnMudjMuSW1wcmVzc2lvbi5JbXByZXNzaW9uVHlwZUID4EEC",
             "EhgKEGdhbWVfb2JqZWN0X3R5cGUYBCABKAUiUAoOSW1wcmVzc2lvblR5cGUS",
             "HwobSU1QUkVTU0lPTl9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJUFJFU0VOVEVE",
-            "EAESDgoKSU5URVJBQ1RFRBACQrUBCiRjb20uZ29vZ2xlLm1hcHMucGxheWFi",
+            "EAESDgoKSU5URVJBQ1RFRBACQtgBCiRjb20uZ29vZ2xlLm1hcHMucGxheWFi",
             "bGVsb2NhdGlvbnMudjNCDlJlc291cmNlc1Byb3RvUAFaUWdvb2dsZS5nb2xh",
             "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbWFwcy9wbGF5YWJsZWxvY2F0",
             "aW9ucy92MztwbGF5YWJsZWxvY2F0aW9uc6ICBEdNUEyqAiBHb29nbGUuTWFw",
-            "cy5QbGF5YWJsZUxvY2F0aW9ucy5WM2IGcHJvdG8z"));
+            "cy5QbGF5YWJsZUxvY2F0aW9ucy5WM8oCIEdvb2dsZVxNYXBzXFBsYXlhYmxl",
+            "TG9jYXRpb25zXFYzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

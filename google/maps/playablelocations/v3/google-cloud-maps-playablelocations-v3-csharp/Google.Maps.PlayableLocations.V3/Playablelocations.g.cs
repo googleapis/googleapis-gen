@@ -66,11 +66,12 @@ namespace Google.Maps.PlayableLocations.V3 {
             "aW9ucy52My5Mb2dJbXByZXNzaW9uc1JlcXVlc3QaOC5nb29nbGUubWFwcy5w",
             "bGF5YWJsZWxvY2F0aW9ucy52My5Mb2dJbXByZXNzaW9uc1Jlc3BvbnNlIh2C",
             "0+STAhciEi92Mzpsb2dJbXByZXNzaW9uczoBKhojykEgcGxheWFibGVsb2Nh",
-            "dGlvbnMuZ29vZ2xlYXBpcy5jb21CvQEKJGNvbS5nb29nbGUubWFwcy5wbGF5",
+            "dGlvbnMuZ29vZ2xlYXBpcy5jb21C4AEKJGNvbS5nb29nbGUubWFwcy5wbGF5",
             "YWJsZWxvY2F0aW9ucy52M0IWUGxheWFibGVMb2NhdGlvbnNQcm90b1ABWlFn",
             "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21hcHMvcGxh",
             "eWFibGVsb2NhdGlvbnMvdjM7cGxheWFibGVsb2NhdGlvbnOiAgRHTVBMqgIg",
-            "R29vZ2xlLk1hcHMuUGxheWFibGVMb2NhdGlvbnMuVjNiBnByb3RvMw=="));
+            "R29vZ2xlLk1hcHMuUGxheWFibGVMb2NhdGlvbnMuVjPKAiBHb29nbGVcTWFw",
+            "c1xQbGF5YWJsZUxvY2F0aW9uc1xWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Maps.PlayableLocations.V3.ResourcesReflection.Descriptor, global::Google.Maps.PlayableLocations.V3.Sample.ResourcesReflection.Descriptor, global::Google.Maps.Unity.ClientinfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -388,9 +389,10 @@ namespace Google.Maps.PlayableLocations.V3 {
     public const int TtlFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Duration ttl_;
     /// <summary>
-    /// Required. Specifies the "time-to-live" for the set of playable locations. You can use
-    /// this value to determine how long to cache the set of playable locations.
-    /// After this length of time, your back-end game server should issue a new
+    /// Required. Specifies the "time-to-live" for the set of playable locations.
+    /// You can use this value to determine how long to cache the set of playable
+    /// locations. After this length of time, your back-end game server should
+    /// issue a new
     /// [SamplePlayableLocations][google.maps.playablelocations.v3.PlayableLocations.SamplePlayableLocations]
     /// request to get a fresh set of playable locations (because for example, they
     /// might have been removed, a park might have closed for the day, a
@@ -599,8 +601,8 @@ namespace Google.Maps.PlayableLocations.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.PlayableLocations.V3.PlayerReport.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.PlayerReport> playerReports_ = new pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.PlayerReport>();
     /// <summary>
-    /// Required. Player reports. The maximum number of player reports that you can log at
-    /// once is 50.
+    /// Required. Player reports. The maximum number of player reports that you can
+    /// log at once is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.PlayerReport> PlayerReports {
@@ -611,9 +613,9 @@ namespace Google.Maps.PlayableLocations.V3 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Required. A string that uniquely identifies the log player reports request. This
-    /// allows you to detect duplicate requests. We recommend that you use UUIDs
-    /// for this value. The value must not exceed 50 characters.
+    /// Required. A string that uniquely identifies the log player reports request.
+    /// This allows you to detect duplicate requests. We recommend that you use
+    /// UUIDs for this value. The value must not exceed 50 characters.
     ///
     /// You should reuse the `request_id` only when retrying a request in the case
     /// of a failure. In that case, the request must be identical to the one that
@@ -631,8 +633,8 @@ namespace Google.Maps.PlayableLocations.V3 {
     public const int ClientInfoFieldNumber = 3;
     private global::Google.Maps.Unity.ClientInfo clientInfo_;
     /// <summary>
-    /// Required. Information about the client device (for example, device model and
-    /// operating system).
+    /// Required. Information about the client device (for example, device model
+    /// and operating system).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Maps.Unity.ClientInfo ClientInfo {
@@ -813,7 +815,8 @@ namespace Google.Maps.PlayableLocations.V3 {
   }
 
   /// <summary>
-  /// A response for the [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
+  /// A response for the
+  /// [LogPlayerReports][google.maps.playablelocations.v3.PlayableLocations.LogPlayerReports]
   /// method.
   ///
   /// This method returns no data upon success.
@@ -1003,8 +1006,8 @@ namespace Google.Maps.PlayableLocations.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Maps.PlayableLocations.V3.Impression.Parser);
     private readonly pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.Impression> impressions_ = new pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.Impression>();
     /// <summary>
-    /// Required. Impression event details. The maximum number of impression reports that you
-    /// can log at once is 50.
+    /// Required. Impression event details. The maximum number of impression
+    /// reports that you can log at once is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Maps.PlayableLocations.V3.Impression> Impressions {
@@ -1015,9 +1018,9 @@ namespace Google.Maps.PlayableLocations.V3 {
     public const int RequestIdFieldNumber = 2;
     private string requestId_ = "";
     /// <summary>
-    /// Required. A string that uniquely identifies the log impressions request. This allows
-    /// you to detect duplicate requests. We recommend that you use UUIDs for this
-    /// value. The value must not exceed 50 characters.
+    /// Required. A string that uniquely identifies the log impressions request.
+    /// This allows you to detect duplicate requests. We recommend that you use
+    /// UUIDs for this value. The value must not exceed 50 characters.
     ///
     /// You should reuse the `request_id` only when retrying a request in case of
     /// failure. In this case, the request must be identical to the one that
@@ -1035,8 +1038,8 @@ namespace Google.Maps.PlayableLocations.V3 {
     public const int ClientInfoFieldNumber = 3;
     private global::Google.Maps.Unity.ClientInfo clientInfo_;
     /// <summary>
-    /// Required. Information about the client device. For example, device model and
-    /// operating system.
+    /// Required. Information about the client device. For example, device model
+    /// and operating system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Maps.Unity.ClientInfo ClientInfo {
@@ -1217,8 +1220,9 @@ namespace Google.Maps.PlayableLocations.V3 {
   }
 
   /// <summary>
-  /// A response for the [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions] method.
-  /// This method returns no data upon success.
+  /// A response for the
+  /// [LogImpressions][google.maps.playablelocations.v3.PlayableLocations.LogImpressions]
+  /// method. This method returns no data upon success.
   /// </summary>
   public sealed partial class LogImpressionsResponse : pb::IMessage<LogImpressionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

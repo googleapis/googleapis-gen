@@ -3,17 +3,6 @@
 return [
     'interfaces' => [
         'google.appengine.v1.Firewall' => [
-            'ListIngressRules' => [
-                'method' => 'get',
-                'uriTemplate' => '/v1/{parent=apps/*}/firewall/ingressRules',
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
             'BatchUpdateIngressRules' => [
                 'method' => 'post',
                 'uriTemplate' => '/v1/{name=apps/*/firewall/ingressRules}:batchUpdate',
@@ -38,6 +27,17 @@ return [
                     ],
                 ],
             ],
+            'DeleteIngressRule' => [
+                'method' => 'delete',
+                'uriTemplate' => '/v1/{name=apps/*/firewall/ingressRules/*}',
+                'placeholders' => [
+                    'name' => [
+                        'getters' => [
+                            'getName',
+                        ],
+                    ],
+                ],
+            ],
             'GetIngressRule' => [
                 'method' => 'get',
                 'uriTemplate' => '/v1/{name=apps/*/firewall/ingressRules/*}',
@@ -49,21 +49,21 @@ return [
                     ],
                 ],
             ],
-            'UpdateIngressRule' => [
-                'method' => 'patch',
-                'uriTemplate' => '/v1/{name=apps/*/firewall/ingressRules/*}',
-                'body' => 'rule',
+            'ListIngressRules' => [
+                'method' => 'get',
+                'uriTemplate' => '/v1/{parent=apps/*}/firewall/ingressRules',
                 'placeholders' => [
-                    'name' => [
+                    'parent' => [
                         'getters' => [
-                            'getName',
+                            'getParent',
                         ],
                     ],
                 ],
             ],
-            'DeleteIngressRule' => [
-                'method' => 'delete',
+            'UpdateIngressRule' => [
+                'method' => 'patch',
                 'uriTemplate' => '/v1/{name=apps/*/firewall/ingressRules/*}',
+                'body' => 'rule',
                 'placeholders' => [
                     'name' => [
                         'getters' => [
